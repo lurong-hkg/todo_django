@@ -3,10 +3,6 @@ import os
 import sys
 
 
-def setup_run():
-    manage((sys.argv[0], 'runserver'))
-
-
 def manage(argv):
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "MyToDoList.settings")
     try:
@@ -25,6 +21,10 @@ def manage(argv):
             )
         raise
     execute_from_command_line(argv)
+
+
+def setup_run():
+    manage((sys.argv[0], 'runserver'))
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
