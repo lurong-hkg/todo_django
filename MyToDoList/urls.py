@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^webapp/', include('webapp.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^login/$', auth_views.login, {'template_name': 'accounts/login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, {'template_name': 'accounts/logout.html'}, name='logout'),
     url(r'^$', schema_view)
