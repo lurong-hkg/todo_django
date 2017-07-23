@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>My Todo list</title>
+{% endblock %}
+
+{% block content %}
+<section class="login-form row">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+    <div class="login-container row col-md-6 col-md-offset-3">
+        <div class="login-panel panel panel-default">
+            <div class="panel-heading">
+                <h3>Logout</h3>
+            </div>
+            <div class="panel-body">
+                <p>You're logged out successfully</p>
+            </div>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
